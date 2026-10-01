@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Teacher's Month</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- COVER PAGE -->
+<div class="cover" id="cover">
+
+    <div class="cover-box">
+
+        <h1>HAPPY</h1>
+
+        <h2>TEACHER'S MONTH</h2>
+
+        <div class="line"></div>
+
+        <button onclick="openMessage()">OPEN MESSAGE</button>
+
+    </div>
+
+</div>
+
+
+<!-- LETTER PAGE -->
+<div class="container" id="message">
+
+    <div class="letter">
+
+        <h2>HAPPY TEACHER'S MONTH</h2>
+
+        <!-- TEACHER PICTURE -->
+        <div class="teacher-pics">
+            <img src="PICS.jpg" alt="Teacher's Picture">
+        </div>
+
+        <!-- MUSIC BELOW PICTURE -->
+        <div class="music">
+
+            <p>A Special Song For You</p>
+
+            <audio controls loop>
+                <source src="forever.mp3" type="audio/mpeg">
+            </audio>
+
+        </div>
+
+        <!-- MESSAGE -->
+        <h3>
+            DEAR PROF AND FOR THE PERSON WHO ALWAYS THERE TO GUIDE US.
+        </h3>
+
+        <h3>
+            Thank you so much for always helping me without any 
+            judgment and truly guiding me on the right path, I am very 
+            grateful to have both of you in my college life and will always
+             be thankful to have met the two of you, because you both really 
+             inspired me to do more and try things I thought I could
+              not do, so Happy Teachers' Month and always remember that
+               your hard work and good teaching are truly appreciated.
+        </h3>
+
+        <p class="closing">
+            With love and gratitude,<br>
+            Your Student
+        </p>
+
+        <button onclick="backToCover()">BACK</button>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function openMessage(){
+    document.getElementById("cover").style.display = "none";
+    document.getElementById("message").style.display = "block";
+}
+
+function backToCover(){
+    document.getElementById("message").style.display = "none";
+    document.getElementById("cover").style.display = "flex";
+
+    let music = document.querySelector("audio");
+    music.pause();
+    music.currentTime = 0;
+}
+
+</script>
+
+</body>
+</html>
